@@ -29,20 +29,20 @@
   const SpanText = defineComponent({render: () => h('span', 'It works!')})
 
   const components = {TopBar, BottomBar, SideBar, HelloWorld, SpanText}
-  const methods = (layout?: any) => {
-    return {
-      handleClickSideBar(item?: ItemInterface) {
-        console.log('layout', layout.value.root.contentItems[0].addChild)
-        console.log('handleClickSideBar item', item)
-        const newItemConfig = {
-          type: 'component',
-          title: 'newItemConfig',
-          componentType: 'SpanText'
-        }
-        layout.value.root.contentItems[0].addChild(SpanText)
-      }
-    }
-  }
+  // const methods = (layout?: any) => {
+  //   return {
+  //     handleClickSideBar(item?: ItemInterface) {
+  //       console.log('layout', layout.value.root.contentItems[0].addChild)
+  //       console.log('handleClickSideBar item', item)
+  //       const newItemConfig = {
+  //         type: 'component',
+  //         title: 'newItemConfig',
+  //         componentType: 'SpanText'
+  //       }
+  //       layout.value.root.contentItems[0].addChild(SpanText)
+  //     }
+  //   }
+  // }
   export default defineComponent({
     components,
     setup() {
@@ -106,12 +106,18 @@
         // console.log('layout', layout.value.root.contentItems[0].addChild)
         console.log('layout', layout.value)
         console.log('handleClickSideBar item', item)
-        const newItemConfig = {
-          type: 'component',
-          title: 'newItemConfig',
-          componentType: 'SpanText'
+        // const newItemConfig = {
+        //   type: 'component',
+        //   title: 'newItemConfig',
+        //   componentType: 'SpanText'
+        // }
+        if (layout.value) {
+          const t1 = layout.value as any
+          if (t1 && t1.root) {
+            t1.root.contentItems[0].addChild(SpanText)
+          }
         }
-        // layout.value.root.contentItems[0].addChild(SpanText)
+        //
       }
       return {
         elementMain: element,
