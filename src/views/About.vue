@@ -19,16 +19,30 @@
 </template>
 <script lang="ts">
   import {useGoldenLayout} from '../use-golden-layout'
-  import {defineComponent, h, shallowRef} from 'vue'
+  import {defineComponent, h, shallowRef, Ref} from 'vue'
   import 'golden-layout/dist/css/goldenlayout-base.css'
   import 'golden-layout/dist/css/themes/goldenlayout-light-theme.css'
   import HelloWorld from '@/components/HelloWorld.vue'
+  import CustomComponentsA from '@/components/CustomComponentsA.vue'
+  import CustomComponentsB from '@/components/CustomComponentsB.vue'
+  import CustomComponentsC from '@/components/CustomComponentsC.vue'
   import {TopBar, BottomBar, SideBar} from '@/layout/bars'
   import {ItemInterface} from '@/model/items/Item.interface'
+  import {LayoutConfig} from 'golden-layout'
 
   const SpanText = defineComponent({render: () => h('span', 'It works!')})
 
-  const components = {TopBar, BottomBar, SideBar, HelloWorld, SpanText}
+  const components = {
+    CustomComponentsA,
+    CustomComponentsB,
+    CustomComponentsC,
+    TopBar,
+    BottomBar,
+    SideBar,
+    HelloWorld,
+    SpanText
+  }
+
   // const methods = (layout?: any) => {
   //   return {
   //     handleClickSideBar(item?: ItemInterface) {
@@ -72,15 +86,15 @@
           ({element}) => element !== toBeRemoved
         )
       }
-
-      const {element, layout} = useGoldenLayout(createComponent, destroyComponent, {
+      const config: LayoutConfig = {
         root: {
           type: 'column',
           content: [
             {
               type: 'component',
               title: 'HelloWorld',
-              componentType: 'HelloWorld'
+              componentType: 'HelloWorld',
+              reorderEnabled: true
             },
             {
               type: 'row',
@@ -100,24 +114,27 @@
             }
           ]
         }
-      })
+      }
+      const {element, layout} = useGoldenLayout(createComponent, destroyComponent, config)
       // console.log('layout', layout)
       const handleClickSideBar = (item?: ItemInterface) => {
-        // console.log('layout', layout.value.root.contentItems[0].addChild)
-        console.log('layout', layout.value)
-        console.log('handleClickSideBar item', item)
-        // const newItemConfig = {
-        //   type: 'component',
-        //   title: 'newItemConfig',
-        //   componentType: 'SpanText'
-        // }
-        if (layout.value) {
-          const t1 = layout.value as any
-          if (t1 && t1.root) {
-            t1.root.contentItems[0].addChild(SpanText)
+        // console.log('item', item)
+        // console.log('layout.value', layout.value?.rootItem?.contentItems[1].addChild(''))
+        if (layout.value && item && item.componentName) {
+          if (layout.value.rootItem) {
+            layout.value.addComponentAtLocation(item.componentName, {}, item.componentName, [{typeId: 5}])
+            // if (item.componentName === 'CustomComponentsA') {
+            //   layout.value.addComponentAtLocation('CustomComponentsA', {}, 'CustomComponentsA', [{typeId: 7}])
+            // }
+            // if (item.componentName === 'CustomComponentsB') {
+            //   layout.value.addComponentAtLocation('CustomComponentsB', {}, 'CustomComponentsB', [{typeId: 7}])
+            // }
+            // if (item.componentName === 'CustomComponentsC') {
+            //   layout.value.addComponentAtLocation('CustomComponentsC', {}, 'CustomComponentsC', [{typeId: 7}])
+            // }
+            // layout.value.addComponent('HelloWorld', {}, 'New Tab B')
           }
         }
-        //
       }
       return {
         elementMain: element,

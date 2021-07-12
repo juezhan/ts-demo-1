@@ -16,9 +16,9 @@
     name: 'SideBar',
     setup(props, {emit}) {
       const cellList: ItemInterface[] = reactive([
-        {id: 1, name: '1', selected: false},
-        {id: 2, name: '2', selected: false},
-        {id: 3, name: '3', selected: false}
+        {id: 1, name: '1', componentName: 'CustomComponentsA', selected: false},
+        {id: 2, name: '2', componentName: 'CustomComponentsB', selected: false},
+        {id: 3, name: '3', componentName: 'CustomComponentsC', selected: false}
       ])
       const onClick = (item: ItemInterface) => {
         // console.log('onClick item', item)
