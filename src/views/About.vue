@@ -122,7 +122,7 @@
         // console.log('layout.value', layout.value?.rootItem?.contentItems[1].addChild(''))
         if (layout.value && item && item.componentName) {
           if (layout.value.rootItem) {
-            layout.value.addComponentAtLocation(item.componentName, {}, item.componentName, [{typeId: 5}])
+            layout.value.addComponentAtLocation(item.componentName, {}, item.componentName, [{typeId: 7}])
             // if (item.componentName === 'CustomComponentsA') {
             //   layout.value.addComponentAtLocation('CustomComponentsA', {}, 'CustomComponentsA', [{typeId: 7}])
             // }
