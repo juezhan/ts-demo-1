@@ -21,7 +21,7 @@
   import {useGoldenLayout} from '../use-golden-layout'
   import {defineComponent, h, shallowRef, Ref} from 'vue'
   import 'golden-layout/dist/css/goldenlayout-base.css'
-  import 'golden-layout/dist/css/themes/goldenlayout-light-theme.css'
+  import 'golden-layout/dist/css/themes/goldenlayout-dark-theme.css'
   import HelloWorld from '@/components/HelloWorld.vue'
   import CustomComponentsA from '@/components/CustomComponentsA.vue'
   import CustomComponentsB from '@/components/CustomComponentsB.vue'
