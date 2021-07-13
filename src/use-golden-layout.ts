@@ -1,4 +1,4 @@
-import {GoldenLayout, LayoutConfig} from 'golden-layout'
+import {GoldenLayout, LayoutConfig, EventEmitter, Stack} from 'golden-layout'
 import {onMounted, ref, shallowRef} from 'vue'
 
 export const isClient = typeof window !== 'undefined'
@@ -24,7 +24,12 @@ export function useGoldenLayout(
   const element = shallowRef<HTMLElement | null>(null)
   const layout = shallowRef<GoldenLayout | null>(null)
   const initialized = ref(false)
-
+  const handleStackHeaderClick = (event: EventEmitter.ClickBubblingEvent) => {
+    const stack = event.target as Stack
+    const itemCount = stack.contentItems.length
+    console.log(event)
+    console.log(itemCount)
+  }
   useDocumentReady(() => {
     if (element.value == null) throw new Error('Element must be set.')
     const goldenLayout = new GoldenLayout(element.value)
@@ -37,6 +42,8 @@ export function useGoldenLayout(
     goldenLayout.releaseComponentEvent = container => {
       destroyComponent(container.element)
     }
+
+    goldenLayout.addEventListener('stackHeaderClick', (event) => handleStackHeaderClick(event))
 
     if (config != null) goldenLayout.loadLayout(config)
 

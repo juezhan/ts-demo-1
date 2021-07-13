@@ -1,6 +1,9 @@
 <template>
   <div class="about foundation-layout row">
-    <top-bar></top-bar>
+    <top-bar @button-click="handleClickSaveLayout"
+             @click-reload-saved-layout="handleClickReloadSavedLayout"
+             @click-load-component-as-root="handleClickLoadComponentAsRoot"
+             @click-replace-component="handleClickReplaceComponent"></top-bar>
     <div class="foundation-layout col">
       <side-bar @item-click="handleClickSideBar"></side-bar>
       <div class="foundation-layout work-space">
@@ -60,6 +63,8 @@
   export default defineComponent({
     components,
     setup() {
+      let _savedLayout: any = null
+
       interface ComponentInstance {
         id: number
         type: string
@@ -87,6 +92,7 @@
         )
       }
       const config: LayoutConfig = {
+        settings: {},
         root: {
           type: 'column',
           content: [
@@ -118,29 +124,53 @@
       const {element, layout} = useGoldenLayout(createComponent, destroyComponent, config)
       // console.log('layout', layout)
       const handleClickSideBar = (item?: ItemInterface) => {
-        // console.log('item', item)
-        // console.log('layout.value', layout.value?.rootItem?.contentItems[1].addChild(''))
         if (layout.value && item && item.componentName) {
           if (layout.value.rootItem) {
-            layout.value.addComponentAtLocation(item.componentName, {}, item.componentName, [{typeId: 7}])
-            // if (item.componentName === 'CustomComponentsA') {
-            //   layout.value.addComponentAtLocation('CustomComponentsA', {}, 'CustomComponentsA', [{typeId: 7}])
-            // }
-            // if (item.componentName === 'CustomComponentsB') {
-            //   layout.value.addComponentAtLocation('CustomComponentsB', {}, 'CustomComponentsB', [{typeId: 7}])
-            // }
-            // if (item.componentName === 'CustomComponentsC') {
-            //   layout.value.addComponentAtLocation('CustomComponentsC', {}, 'CustomComponentsC', [{typeId: 7}])
-            // }
-            // layout.value.addComponent('HelloWorld', {}, 'New Tab B')
+            layout.value.addComponentAtLocation(item.componentName, {}, item.componentName, [{typeId: 5}])
           }
         }
+      }
+      const handleClickSaveLayout = () => {
+        _savedLayout = layout.value?.saveLayout()
+        // console.log(layout.value?.saveLayout())
+      }
+      const handleClickReloadSavedLayout = () => {
+        const layoutConfig = LayoutConfig.fromResolved(_savedLayout)
+        if (layout.value) {
+          layout.value.loadLayout(layoutConfig)
+        }
+      }
+      const handleClickLoadComponentAsRoot = () => {
+        const itemConfig: any = {
+          type: 'component',
+          componentType: 'CustomComponentsA',
+          componentState: 'yellow'
+        }
+        if (layout.value) {
+          layout.value.loadComponentAsRoot(itemConfig)
+        }
+      }
+      const handleClickReplaceComponent = () => {
+        // const componentType = this._registeredComponentTypesForReplaceSelect.value;
+        // const itemConfig: ComponentItemConfig = {
+        //   componentType,
+        //   type: 'component',
+        // }
+        // const rootItem = this._goldenLayout.rootItem;
+        // if (rootItem !== undefined) {
+        //   const content = [rootItem];
+        //   this.replaceComponentRecursively(content, itemConfig);
+        // }
       }
       return {
         elementMain: element,
         layout,
         componentInstances,
-        handleClickSideBar
+        handleClickSideBar,
+        handleClickSaveLayout,
+        handleClickReloadSavedLayout,
+        handleClickLoadComponentAsRoot,
+        handleClickReplaceComponent
         // ...methods(layout)
       }
     }
