@@ -126,7 +126,7 @@
       const handleClickSideBar = (item?: ItemInterface) => {
         if (layout.value && item && item.componentName) {
           if (layout.value.rootItem) {
-            layout.value.addComponentAtLocation(item.componentName, {}, item.componentName, [{typeId: 5}])
+            layout.value.addComponentAtLocation(item.componentName, {}, item.componentName, [{typeId: 1}])
           }
         }
       }
@@ -150,16 +150,29 @@
           layout.value.loadComponentAsRoot(itemConfig)
         }
       }
+      const replaceComponentRecursively = (content: any[], itemConfig: any) => {
+        console.log('content', content)
+        console.log('itemConfig', itemConfig)
+        for (const item of content) {
+          if (item !== null) {
+            console.log('item', item)
+            // const container = item.container
+            // container.replaceComponent(itemConfig)
+          } else {
+            replaceComponentRecursively(item.contentItems, itemConfig)
+          }
+        }
+      }
       const handleClickReplaceComponent = () => {
-        // const componentType = this._registeredComponentTypesForReplaceSelect.value;
-        // const itemConfig: ComponentItemConfig = {
-        //   componentType,
+        // const itemConfig: any = {
         //   type: 'component',
+        //   componentType: 'CustomComponentsA'
         // }
-        // const rootItem = this._goldenLayout.rootItem;
-        // if (rootItem !== undefined) {
-        //   const content = [rootItem];
-        //   this.replaceComponentRecursively(content, itemConfig);
+        console.log('layout', layout.value?.rootItem?.contentItems)
+        // if (layout.value) {
+        //   const rootItem = layout.value.rootItem
+        //   const content = [rootItem]
+        //   replaceComponentRecursively(content, itemConfig)
         // }
       }
       return {
