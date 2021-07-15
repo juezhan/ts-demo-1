@@ -168,7 +168,8 @@
         //   type: 'component',
         //   componentType: 'CustomComponentsA'
         // }
-        console.log('layout', layout.value?.rootItem?.contentItems)
+        const ta = layout.value
+        console.log('layout', ta)
         // if (layout.value) {
         //   const rootItem = layout.value.rootItem
         //   const content = [rootItem]
