@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h1>CustomComponentsA</h1>
+    <h1>CustomComponentsF</h1>
   </div>
 </template>
 
 <script lang="ts">
-  import {defineComponent} from 'vue'
+  import { defineComponent } from 'vue'
 
   export default defineComponent({
-    name: 'CustomComponentsA'
+    name: 'CustomComponentsF'
   })
 </script>
 
 <style scoped lang="scss">
   h1 {
-    color: red;
+    color: yellow;
   }
 </style>

@@ -1,4 +1,4 @@
-import {GoldenLayout, LayoutConfig, EventEmitter, Stack} from 'golden-layout'
+import {GoldenLayout, LayoutConfig, EventEmitter, Stack, DragSource} from 'golden-layout'
 import {onMounted, ref, shallowRef} from 'vue'
 
 export const isClient = typeof window !== 'undefined'
@@ -23,12 +23,13 @@ export function useGoldenLayout(
 ) {
   const element = shallowRef<HTMLElement | null>(null)
   const layout = shallowRef<GoldenLayout | null>(null)
+  const dragSource = shallowRef<DragSource | null>(null)
   const initialized = ref(false)
   const handleStackHeaderClick = (event: EventEmitter.ClickBubblingEvent) => {
-    const stack = event.target as Stack
-    const itemCount = stack.contentItems.length
-    console.log(event)
-    console.log(itemCount)
+    // const stack = event.target as Stack
+    // const itemCount = stack.contentItems.length
+    // console.log(event)
+    // console.log(itemCount)
   }
   useDocumentReady(() => {
     if (element.value == null) throw new Error('Element must be set.')
@@ -36,6 +37,8 @@ export function useGoldenLayout(
 
     goldenLayout.getComponentEvent = (container, itemConfig) => {
       const {componentType} = itemConfig
+      // console.log('componentType', componentType)
+      // console.log('container', container)
       if (typeof componentType !== 'string') throw new Error('Invalid component type.')
       createComponent(componentType, container.element)
     }
@@ -48,9 +51,9 @@ export function useGoldenLayout(
     if (config != null) goldenLayout.loadLayout(config)
 
     layout.value = goldenLayout as any
-
+    dragSource.value = DragSource
     initialized.value = true
   })
 
-  return {element, initialized, layout}
+  return {element, initialized, layout, dragSource}
 }

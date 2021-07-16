@@ -5,12 +5,17 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Index',
-    redirect: '/about'
+    redirect: '/golden-layout-test'
   },
   {
     path: '/home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/golden-layout-test',
+    name: 'GoldenLayoutTest',
+    component: () => import(/* webpackChunkName: "about" */ '../views/GoldenLayoutTest.vue')
   },
   {
     path: '/about',

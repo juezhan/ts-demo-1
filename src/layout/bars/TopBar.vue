@@ -4,6 +4,9 @@
     <button @click="handleClickReloadSavedLayout">Reload saved Layout</button>
     <button @click="handleClickLoadComponentAsRoot">Load Component as Root</button>
     <button @click="handleClickReplaceComponent" >Replace Color Component with</button>
+    <button @click="handleClickAddComponentByDrag" >Add New Drag Component</button>
+    <button @click="handleClickAddComponentByDrag" >Clear Layout</button>
+    <button id="btn1">Add Component Drag Source</button>
   </div>
 </template>
 
@@ -25,11 +28,15 @@
       const handleClickReplaceComponent = () => {
         emit('click-replace-component')
       }
+      const handleClickAddComponentByDrag = () => {
+        emit('click-add-component-drag')
+      }
       return {
         handleClick,
         handleClickReloadSavedLayout,
         handleClickLoadComponentAsRoot,
-        handleClickReplaceComponent
+        handleClickReplaceComponent,
+        handleClickAddComponentByDrag
       }
     }
   })
