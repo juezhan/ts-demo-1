@@ -4,7 +4,8 @@
              @click-reload-saved-layout="handleClickReloadSavedLayout"
              @click-load-component-as-root="handleClickLoadComponentAsRoot"
              @click-replace-component="handleClickReplaceComponent"
-             @click-add-component-drag="handleClickAddComponentByDrag"></top-bar>
+             @click-add-component-drag="handleClickAddComponentByDrag"
+             @click-clear-layout="handleClickClearLayout"></top-bar>
     <div class="foundation-layout col">
       <side-bar @item-click="handleClickSideBar"></side-bar>
       <div class="foundation-layout work-space">
@@ -217,6 +218,17 @@
         //   console.log('dragSource', dragSource.value)
         // }
       }
+      const handleClickClearLayout = () => {
+        console.log('handleClickClearLayout')
+        const temp = layout.value as any
+        if (temp) {
+          temp.clear()
+        }
+        // if (dragSource.value) {
+        //   new dragSource.value()
+        //   console.log('dragSource', dragSource.value)
+        // }
+      }
       // const handleClickAddComponentByDrag = () => {
       //   if (layout.value) {
       //     const addComponentDragSource = layout.value.newDragSource(addComponentByDragButton, {type: 'CustomComponentsC'})
@@ -231,7 +243,8 @@
         handleClickReloadSavedLayout,
         handleClickLoadComponentAsRoot,
         handleClickReplaceComponent,
-        handleClickAddComponentByDrag
+        handleClickAddComponentByDrag,
+        handleClickClearLayout
         // ...methods(layout)
       }
     }

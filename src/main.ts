@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Custom, {CustomInterface} from '@/components/Custom'
+import '@progress/kendo-theme-default/dist/all.css'
 
 const app = createApp(App)
 app.use(store)

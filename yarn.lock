@@ -978,6 +978,127 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@progress/kendo-data-query@^1.5.5":
+  version "1.5.5"
+  resolved "https://registry.nlark.com/@progress/kendo-data-query/download/@progress/kendo-data-query-1.5.5.tgz#333422a24be47001465fe855c2e0bd8046eaeb36"
+  integrity sha1-MzQiokvkcAFGX+hVwuC9gEbq6zY=
+  dependencies:
+    tslib "^1.7.0"
+
+"@progress/kendo-date-math@1.5.1":
+  version "1.5.1"
+  resolved "https://registry.npm.taobao.org/@progress/kendo-date-math/download/@progress/kendo-date-math-1.5.1.tgz#6e3dae55b089e3d4b017b65f5028f034acab7cca"
+  integrity sha1-bj2uVbCJ49SwF7ZfUCjwNKyrfMo=
+  dependencies:
+    tslib "^1.7.0"
+
+"@progress/kendo-drawing@^1.10.1":
+  version "1.10.1"
+  resolved "https://registry.nlark.com/@progress/kendo-drawing/download/@progress/kendo-drawing-1.10.1.tgz#399052b18149cc785c48bf7893fd2021fbb9c8f0"
+  integrity sha1-OZBSsYFJzHhcSL94k/0gIfu5yPA=
+  dependencies:
+    "@progress/pako-esm" "^1.0.1"
+
+"@progress/kendo-licensing@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.nlark.com/@progress/kendo-licensing/download/@progress/kendo-licensing-1.2.0.tgz#949c5b954efa609ddfa389c714e5d315a6d8852b"
+  integrity sha1-lJxblU76YJ3fo4nHFOXTFabYhSs=
+  dependencies:
+    jsonwebtoken "^8.5.1"
+
+"@progress/kendo-popup-common@^1.6.1":
+  version "1.8.0"
+  resolved "https://registry.npm.taobao.org/@progress/kendo-popup-common/download/@progress/kendo-popup-common-1.8.0.tgz#02ec32974762f30bdb2bb968e3c5b73c76c82c33"
+  integrity sha1-Auwyl0di8wvbK7lo48W3PHbILDM=
+
+"@progress/kendo-theme-default@^4.39.0":
+  version "4.39.0"
+  resolved "https://registry.nlark.com/@progress/kendo-theme-default/download/@progress/kendo-theme-default-4.39.0.tgz#f2c069181e059f6186863d8102a77726c17838c0"
+  integrity sha1-8sBpGB4Fn2GGhj2BAqd3JsF4OMA=
+
+"@progress/kendo-vue-animation@2.3.0", "@progress/kendo-vue-animation@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-animation/download/@progress/kendo-vue-animation-2.3.0.tgz#bc89a5316582a1b95fa0cdf12add44a048fc7a99"
+  integrity sha1-vImlMWWCoblfoM3xKt1EoEj8epk=
+  dependencies:
+    "@progress/kendo-vue-common" "2.3.0"
+
+"@progress/kendo-vue-buttons@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-buttons/download/@progress/kendo-vue-buttons-2.3.0.tgz#1afa1eaaba306a424d1f90da71796b07ec06e88a"
+  integrity sha1-GvoeqrowakJNH5DacXlrB+wG6Io=
+  dependencies:
+    "@progress/kendo-vue-common" "2.3.0"
+    "@progress/kendo-vue-popup" "2.3.0"
+
+"@progress/kendo-vue-common@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-common/download/@progress/kendo-vue-common-2.3.0.tgz#caf14c57f11bc4702108e59b9c1b75cebc6481ec"
+  integrity sha1-yvFMV/EbxHAhCOWbnBt1zrxkgew=
+  dependencies:
+    "@telerik/kendo-draggable" "2.2.0"
+
+"@progress/kendo-vue-data-tools@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-data-tools/download/@progress/kendo-vue-data-tools-2.3.0.tgz#c9d0b4ff39c9f6991530f2909522abd3f08100cf"
+  integrity sha1-ydC0/znJ9pkVMPKQlSKr0/CBAM8=
+  dependencies:
+    "@progress/kendo-vue-common" "2.3.0"
+
+"@progress/kendo-vue-dateinputs@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-dateinputs/download/@progress/kendo-vue-dateinputs-2.3.0.tgz#a25be6856abd54b33f99477a79a62f5701100b11"
+  integrity sha1-olvmhWq9VLM/mUd6eaYvVwEQCxE=
+  dependencies:
+    "@progress/kendo-date-math" "1.5.1"
+    "@progress/kendo-vue-buttons" "2.3.0"
+    "@progress/kendo-vue-common" "2.3.0"
+    "@progress/kendo-vue-popup" "2.3.0"
+
+"@progress/kendo-vue-dialogs@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-dialogs/download/@progress/kendo-vue-dialogs-2.3.0.tgz#07db2d5e628fff65a6ae28f985399a1b924baeb2"
+  integrity sha1-B9stXmKP/2Wmrij5hTmaG5JLrrI=
+  dependencies:
+    "@progress/kendo-vue-common" "2.3.0"
+
+"@progress/kendo-vue-dropdowns@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-dropdowns/download/@progress/kendo-vue-dropdowns-2.3.0.tgz#5e78d212e0d2b647c63479811b3bf9b1e117d586"
+  integrity sha1-XnjSEuDStkfGNHmBGzv5seEX1YY=
+  dependencies:
+    "@progress/kendo-vue-common" "2.3.0"
+    "@progress/kendo-vue-popup" "2.3.0"
+
+"@progress/kendo-vue-inputs@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-inputs/download/@progress/kendo-vue-inputs-2.3.0.tgz#4a63d3008e9582741c868ec437d9ed5e3f5c6607"
+  integrity sha1-SmPTAI6VgnQcho7EN9ntXj9cZgc=
+  dependencies:
+    "@progress/kendo-vue-common" "2.3.0"
+
+"@progress/kendo-vue-intl@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-intl/download/@progress/kendo-vue-intl-2.3.0.tgz#38f7dc9838b34e2daea2a5512e0ec9af679deae0"
+  integrity sha1-OPfcmDizTi2uoqVRLg7Jr2ed6uA=
+  dependencies:
+    "@progress/kendo-vue-common" "2.3.0"
+    "@telerik/kendo-intl" "^2.2.0"
+
+"@progress/kendo-vue-popup@2.3.0":
+  version "2.3.0"
+  resolved "https://registry.nlark.com/@progress/kendo-vue-popup/download/@progress/kendo-vue-popup-2.3.0.tgz#fb12b3a19e8b7cfcb249082e3df462bd902c3ed3"
+  integrity sha1-+xKzoZ6LfPyySQguPfRivZAsPtM=
+  dependencies:
+    "@progress/kendo-popup-common" "^1.6.1"
+    "@progress/kendo-vue-animation" "2.3.0"
+    "@progress/kendo-vue-common" "2.3.0"
+
+"@progress/pako-esm@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/@progress/pako-esm/download/@progress/pako-esm-1.0.1.tgz#eeb7d2c3f8e865198edf23fb42645bd8cb513a11"
+  integrity sha1-7rfSw/joZRmO3yP7QmRb2MtROhE=
+
 "@soda/friendly-errors-webpack-plugin@^1.7.1":
   version "1.8.0"
   resolved "https://registry.nlark.com/@soda/friendly-errors-webpack-plugin/download/@soda/friendly-errors-webpack-plugin-1.8.0.tgz#84751d82a93019d5c92c0cf0e45ac59087cd2240"
@@ -992,6 +1113,16 @@
   version "1.0.2"
   resolved "https://registry.npm.taobao.org/@soda/get-current-script/download/@soda/get-current-script-1.0.2.tgz#a53515db25d8038374381b73af20bb4f2e508d87"
   integrity sha1-pTUV2yXYA4N0OBtzryC7Ty5QjYc=
+
+"@telerik/kendo-draggable@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.nlark.com/@telerik/kendo-draggable/download/@telerik/kendo-draggable-2.2.0.tgz#651ee63e8978c3c9d8548a3ece37280ce5944863"
+  integrity sha1-ZR7mPol4w8nYVIo+zjcoDOWUSGM=
+
+"@telerik/kendo-intl@^2.2.0":
+  version "2.3.0"
+  resolved "https://registry.npm.taobao.org/@telerik/kendo-intl/download/@telerik/kendo-intl-2.3.0.tgz#df48b47f4e6d89bd6a9189a15176f521e4f40390"
+  integrity sha1-30i0f05tib1qkYmhUXb1IeT0A5A=
 
 "@types/body-parser@*":
   version "1.19.0"
@@ -2417,6 +2548,11 @@ browserslist@^4.0.0, browserslist@^4.12.0, browserslist@^4.16.6:
     escalade "^3.1.1"
     node-releases "^1.1.71"
 
+buffer-equal-constant-time@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/buffer-equal-constant-time/download/buffer-equal-constant-time-1.0.1.tgz#f8e71132f7ffe6e01a5c9697a4c6f3e48d5cc819"
+  integrity sha1-+OcRMvf/5uAaXJaXpMbz5I1cyBk=
+
 buffer-from@^1.0.0:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/buffer-from/download/buffer-from-1.1.1.tgz#32713bc028f75c02fdb710d7c7bcec1f2c6070ef"
@@ -3679,6 +3815,13 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
+ecdsa-sig-formatter@1.0.11:
+  version "1.0.11"
+  resolved "https://registry.npm.taobao.org/ecdsa-sig-formatter/download/ecdsa-sig-formatter-1.0.11.tgz#ae0f0fa2d85045ef14a817daa3ce9acd0489e5bf"
+  integrity sha1-rg8PothQRe8UqBfao86azQSJ5b8=
+  dependencies:
+    safe-buffer "^5.0.1"
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/ee-first/download/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -4795,6 +4938,11 @@ globule@^1.0.0:
     lodash "~4.17.10"
     minimatch "~3.0.2"
 
+golden-layout@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.nlark.com/golden-layout/download/golden-layout-2.2.1.tgz#5ae3fc47c0e1b09a31f341669e2e19b917a7bb78"
+  integrity sha1-WuP8R8DhsJox80Fmni4ZuRenu3g=
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.2.0:
   version "4.2.6"
   resolved "https://registry.nlark.com/graceful-fs/download/graceful-fs-4.2.6.tgz#ff040b2b0853b23c3d31027523706f1885d76bee"
@@ -5793,6 +5941,22 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+jsonwebtoken@^8.5.1:
+  version "8.5.1"
+  resolved "https://registry.npm.taobao.org/jsonwebtoken/download/jsonwebtoken-8.5.1.tgz#00e71e0b8df54c2121a1f26137df2280673bcc0d"
+  integrity sha1-AOceC431TCEhofJhN98igGc7zA0=
+  dependencies:
+    jws "^3.2.2"
+    lodash.includes "^4.3.0"
+    lodash.isboolean "^3.0.3"
+    lodash.isinteger "^4.0.4"
+    lodash.isnumber "^3.0.3"
+    lodash.isplainobject "^4.0.6"
+    lodash.isstring "^4.0.1"
+    lodash.once "^4.0.0"
+    ms "^2.1.1"
+    semver "^5.6.0"
+
 jsprim@^1.2.2:
   version "1.4.1"
   resolved "https://registry.npm.taobao.org/jsprim/download/jsprim-1.4.1.tgz#313e66bc1e5cc06e438bc1b7499c2e5c56acb6a2"
@@ -5802,6 +5966,23 @@ jsprim@^1.2.2:
     extsprintf "1.3.0"
     json-schema "0.2.3"
     verror "1.10.0"
+
+jwa@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.npm.taobao.org/jwa/download/jwa-1.4.1.tgz#743c32985cb9e98655530d53641b66c8645b039a"
+  integrity sha1-dDwymFy56YZVUw1TZBtmyGRbA5o=
+  dependencies:
+    buffer-equal-constant-time "1.0.1"
+    ecdsa-sig-formatter "1.0.11"
+    safe-buffer "^5.0.1"
+
+jws@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.npm.taobao.org/jws/download/jws-3.2.2.tgz#001099f3639468c9414000e99995fa52fb478304"
+  integrity sha1-ABCZ82OUaMlBQADpmZX6UvtHgwQ=
+  dependencies:
+    jwa "^1.4.1"
+    safe-buffer "^5.0.1"
 
 killable@^1.0.1:
   version "1.0.1"
@@ -5960,6 +6141,36 @@ lodash.defaultsdeep@^4.6.1:
   resolved "https://registry.nlark.com/lodash.defaultsdeep/download/lodash.defaultsdeep-4.6.1.tgz#512e9bd721d272d94e3d3a63653fa17516741ca6"
   integrity sha1-US6b1yHSctlOPTpjZT+hdRZ0HKY=
 
+lodash.includes@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.npm.taobao.org/lodash.includes/download/lodash.includes-4.3.0.tgz#60bb98a87cb923c68ca1e51325483314849f553f"
+  integrity sha1-YLuYqHy5I8aMoeUTJUgzFISfVT8=
+
+lodash.isboolean@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npm.taobao.org/lodash.isboolean/download/lodash.isboolean-3.0.3.tgz#6c2e171db2a257cd96802fd43b01b20d5f5870f6"
+  integrity sha1-bC4XHbKiV82WgC/UOwGyDV9YcPY=
+
+lodash.isinteger@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.npm.taobao.org/lodash.isinteger/download/lodash.isinteger-4.0.4.tgz#619c0af3d03f8b04c31f5882840b77b11cd68343"
+  integrity sha1-YZwK89A/iwTDH1iChAt3sRzWg0M=
+
+lodash.isnumber@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.npm.taobao.org/lodash.isnumber/download/lodash.isnumber-3.0.3.tgz#3ce76810c5928d03352301ac287317f11c0b1ffc"
+  integrity sha1-POdoEMWSjQM1IwGsKHMX8RwLH/w=
+
+lodash.isplainobject@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.npm.taobao.org/lodash.isplainobject/download/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+  integrity sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=
+
+lodash.isstring@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npm.taobao.org/lodash.isstring/download/lodash.isstring-4.0.1.tgz#d527dfb5456eca7cc9bb95d5daeaf88ba54a5451"
+  integrity sha1-1SfftUVuynzJu5XV2ur4i6VKVFE=
+
 lodash.kebabcase@^4.1.1:
   version "4.1.1"
   resolved "https://registry.npm.taobao.org/lodash.kebabcase/download/lodash.kebabcase-4.1.1.tgz#8489b1cb0d29ff88195cceca448ff6d6cc295c36"
@@ -5974,6 +6185,11 @@ lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.npm.taobao.org/lodash.memoize/download/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
+
+lodash.once@^4.0.0:
+  version "4.1.1"
+  resolved "https://registry.npm.taobao.org/lodash.once/download/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
+  integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
 
 lodash.transform@^4.6.0:
   version "4.6.0"
@@ -9063,7 +9279,7 @@ tsconfig-paths@^3.9.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
-tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.7.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.nlark.com/tslib/download/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha1-zy04vcNKE0vK8QkcQfZhni9nLQA=
@@ -9447,6 +9663,11 @@ vue-loader@^15.9.2:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-property-decorator@^9.1.2:
+  version "9.1.2"
+  resolved "https://registry.npm.taobao.org/vue-property-decorator/download/vue-property-decorator-9.1.2.tgz#266a2eac61ba6527e2e68a6933cfb98fddab5457"
+  integrity sha1-JmourGG6ZSfi5oppM8+5j92rVFc=
 
 vue-resize-directive@^1.2.0:
   version "1.2.0"

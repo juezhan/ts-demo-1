@@ -1,12 +1,25 @@
 <template>
-  <div class="bottom-bar"></div>
+  <div class="bottom-bar">
+    <drop-down-list
+      :data-items="categories"
+      :default-item="'Select sport ...'"></drop-down-list>
+  </div>
 </template>
 
 <script lang="ts">
   import {defineComponent} from 'vue'
+  import {DropDownList} from '@progress/kendo-vue-dropdowns'
 
   export default defineComponent({
-    name: 'BottomBar'
+    name: 'BottomBar',
+    components: {
+      DropDownList
+    },
+    setup() {
+      return {
+        categories: ['Basketball', 'Football', 'Tennis', 'Volleyball']
+      }
+    }
   })
 </script>
 

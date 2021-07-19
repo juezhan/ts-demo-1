@@ -9,6 +9,7 @@
     <div class="layout-main">
       <golden-layout :layout-config="layoutConfig"></golden-layout>
     </div>
+    <bottom-bar></bottom-bar>
   </div>
 </template>
 
@@ -16,11 +17,13 @@
   import {defineComponent} from 'vue'
   import GoldenLayout from '../layout/GoldenLayout.vue'
   import useCounter from '@/custom-api/useCounter'
+  import {BottomBar} from '@/layout/bars'
 
   export default defineComponent({
     name: 'GoldenLayoutTest',
     components: {
-      GoldenLayout
+      GoldenLayout,
+      BottomBar
     },
     setup(props, context) {
       const {count, double, increment} = useCounter(props, context)
